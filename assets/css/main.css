@@ -1869,3 +1869,59 @@ body.dark-mode .stats-item {
     padding: 14px 20px;
   }
 }
+
+
+
+
+
+/* Dark Mode Nav Overrides */
+body.dark-mode {
+  --nav-color: #e5e7eb;
+  --nav-hover-color: #22c55e;
+
+  --nav-mobile-background-color: #020617;
+  --nav-dropdown-background-color: #020617;
+  --nav-dropdown-color: #e5e7eb;
+  --nav-dropdown-hover-color: #22c55e;
+}
+
+/* Mobile Nav Toggle Button */
+.mobile-nav-toggle {
+  color: var(--nav-color);
+  font-size: 32px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Hover */
+.mobile-nav-toggle:hover {
+  color: var(--nav-hover-color);
+}
+
+/* Dark mode specific enhancement */
+body.dark-mode .mobile-nav-toggle {
+  color: #e5e7eb;
+}
+/* Mobile Navigation Menu */
+@media (max-width: 1199px) {
+  .navmenu {
+    background: var(--nav-mobile-background-color);
+    transition: background 0.3s ease;
+  }
+
+  .navmenu ul li a {
+    color: var(--nav-color);
+  }
+
+  .navmenu ul li a:hover,
+  .navmenu ul li a.active {
+    color: var(--nav-hover-color);
+  }
+}
+/* Mobile Nav Open State */
+body.dark-mode.mobile-nav-active .navmenu {
+  background: #020617;
+}
+body.dark-mode .mobile-nav-toggle.bi-x {
+  color: #22c55e;
+}
